@@ -1,2 +1,5 @@
 
-docker volume create --name clientvol --opt type=none --opt device=/clientdata --opt o=bind
+docker volume create clientvol
+
+docker run -d --name client --mount source=clientvol,target=/clientdata nginx:alpine
+
