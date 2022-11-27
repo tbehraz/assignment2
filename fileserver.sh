@@ -5,3 +5,4 @@ docker run -d --name server --mount source=servervol,target=/serverdata nginx:al
 docker run bash:latest
 bash -c "base64 /dev/urandom | head -c 2000 > file.txt"
 
+docker cp server:/serverdata .
